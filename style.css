@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-image: url(./images/new-year.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  color: white;
+}
+
+/* Adding an overlay */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Bring text in front overlay*/
+body * {
+  z-index: 1;
+}
+
+h1 {
+  font-size: 60px;
+  margin: -80px 0 50px;
+}
+
+.countdown {
+  display: flex;
+  transform: scale(2.5);
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .time {
+    margin: 5px;
+  }
+
+  .time h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .time small {
+    font-size: 11px;
+  }
+}
