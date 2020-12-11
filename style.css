@@ -29,7 +29,7 @@ body::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Bring text in front overlay*/
@@ -42,8 +42,19 @@ h1 {
   margin: -80px 0 50px;
 }
 
+.year {
+  font-size: 200px;
+  color: rgb(130, 170, 207);
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.5;
+}
+
 .countdown {
-  display: flex;
+  display: none;
   transform: scale(2.5);
 }
 
